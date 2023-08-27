@@ -27,7 +27,7 @@ public class CustomerService {
 
        customerRepository.save(customer);
 
-       return "sucess";
+       return "success";
 
 
     }

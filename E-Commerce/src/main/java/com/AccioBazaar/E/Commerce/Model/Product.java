@@ -22,14 +22,10 @@ public class Product {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
-    private String name;
-
+    private String productName;
     private int price;
 
     private int quantity;
-
-    private String productName;
 
     @Enumerated(EnumType.STRING)
     ProductCategory productCategory;

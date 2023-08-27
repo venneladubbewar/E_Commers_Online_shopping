@@ -1,6 +1,7 @@
 package com.AccioBazaar.E.Commerce.Controller;
 
 import com.AccioBazaar.E.Commerce.Exception.ProductNotFoundException;
+import com.AccioBazaar.E.Commerce.Repository.ItemRepository;
 import com.AccioBazaar.E.Commerce.ResponseDto.ItemResponseDto;
 import com.AccioBazaar.E.Commerce.Service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,8 @@ public class ItemController {
 
      @Autowired
      ItemService itemService;
+     @Autowired
+     ItemRepository itemRepository;
 
      @GetMapping("/view/{productId}")
      public ResponseEntity viewItem(@PathVariable ("productId") int productId) {
@@ -30,3 +33,4 @@ public class ItemController {
           return new ResponseEntity(itemResponseDto,HttpStatus.ACCEPTED);
      }
 }
+

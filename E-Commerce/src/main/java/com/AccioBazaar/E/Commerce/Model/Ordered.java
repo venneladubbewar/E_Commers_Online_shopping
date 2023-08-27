@@ -13,6 +13,7 @@ import java.util.List;
 @AllArgsConstructor
 @Data   //@data for getter and setter
 @Entity
+@Builder
 @Table(name = "orders")
 
 public class Ordered {
@@ -35,6 +36,6 @@ public class Ordered {
     Customer customer;
 
     @OneToMany (mappedBy = "ordered", cascade = CascadeType.ALL)
-    List<Item> items = new ArrayList<>();
+    List<Item> orderedItems = new ArrayList<>();
 
 }

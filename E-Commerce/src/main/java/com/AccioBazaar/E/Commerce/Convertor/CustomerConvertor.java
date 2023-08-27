@@ -15,5 +15,5 @@ public class CustomerConvertor {
                    .mobNo(customerRequestDto.getMobNo())
                    .build();
 
-    }
+    }  
 }
